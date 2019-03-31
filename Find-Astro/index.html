@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Astro!</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script language="javascript">
+	window.onload = function(e){
+		//Load the sounds
+		sounds.load([
+		  "sound.js-master/sounds/bounce.mp3"
+		]);
+		
+		sounds.whenLoaded = function() {
+			console.log('loaded');
+		}
+	}
+  
+  </script>
+</head>
+<body>	
+  <h1><span class="h1Text">Find Astro! </span><span class="score">0</span></h1>
+  <h3><span class="h3Timer">00:15</span></h3>
+ 
+  <div class="game">
+    <div class="hole hole1">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole2">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole3">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole4">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole5">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole6">
+      <div class="mole"></div>
+    </div>
+	<div class="hole hole7">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole8">
+      <div class="mole"></div>
+    </div>
+    <div class="hole hole9">
+      <div class="mole"></div>
+    </div>
+  </div>
+  <button onClick="startGame();">Start!</button>
+    <script src="confetti.js-master/confetti.js"></script>
+    <script src="script.js"></script>
+   <script src="sound.js-master/sound.js"></script>
+</body>
+</html>
