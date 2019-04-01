@@ -96,3 +96,18 @@ button:hover {
 	position: absolute;
 	top: 0;
 }
+@media screen and (max-width: 768px) {
+  h1  h2{
+    font-size: 5rem
+  }
+  h3{
+    font-size: 5rem
+  }
+  .hole:after {
+    height: 84px;
+    bottom: -28px;
+  }
+  button {
+    margin-top: 1em
+  }
+}
