@@ -15,7 +15,6 @@
 		const idx = Math.floor(Math.random() * holes.length);
 		const hole = holes[idx];
 		if (hole === lastHole) {
-		  console.log('Ah nah thats the same one bud');
 		  return randomHole(holes);
 		}
 		lastHole = hole;
@@ -26,20 +25,22 @@
 		const time = randomTime(200, 1000);
 		const hole = randomHole(holes);
 		hole.classList.add('up');
-		sounds["sound.js-master/sounds/bounce.mp3"].play();
+		jumpSound(); 
 		setTimeout(() => {
 		hole.classList.remove('up')
 			if (!timeUp) {
-			  peep()
+			  peep();
 			} else {
-			  //Add Switch
-			  if(score > 5){
-				h1Text.textContent = 'Congratulation!!! Score: '
-			  }
+			  //Add conditional
 			  if(score == 0){
-				h1Text.textContent = 'Try Again Score: '
+				h1Text.textContent = 'Try Again Score: ';
 			  }
-			  
+			  if(score > 0 && score <= 10){
+				h1Text.textContent = 'Nice Job! Score: ';
+			  }
+			  if(score > 10){
+				h1Text.textContent = 'Congratulation!!! Score: ';
+			  }
 			}
 		}, time)
 	}
@@ -49,22 +50,26 @@
 		h1Text.textContent = 'Find Astro! ';
 		timeUp = false;
 		score = 0;
-		h3Timer.textContent = '00:15';
+		h3Timer.textContent = '00:25';
 		timer();
 		peep();
-		
 		
 		setTimeout(function() {
 			// stuff here
 			timeUp = true;
-			if(score > 5){
+			if(score == 0){
+				sounds["sound.js-master/sounds/explosion.wav"].play();
+			}
+				
+			if(score > 10){
+				confettiSound();
 				throwConfetti();
 			}
-		}, 15000);
+		}, 25000);
 	}
 	
 	function timer(){
-		var sec = 15;
+		var sec = 25;
 		var timer = setInterval(function(){
 			sec--;
 			if (sec >= 10) {
@@ -82,7 +87,7 @@
 
 	function bonk(e) {
 	if(!e.isTrusted) return; // cheater!
-	score++;
+	score = score + 2;
 	this.parentNode.classList.remove('up');
 	scoreBoard.textContent = score;
 	}
@@ -92,6 +97,34 @@
 		setInterval(function() {
 			stopConfetti();
 		}, 15000);
+	}
+	
+	//The jump sound
+	function jumpSound() {
+		  soundEffect(
+			523.25,       //frequency
+			0.05,         //attack
+			0.2,          //decay
+			"sine",       //waveform
+			3,            //volume
+			0.8,          //pan
+			0,            //wait before playing
+			600,          //pitch bend amount
+			true,         //reverse
+			100,          //random pitch range
+			0,            //dissonance
+			undefined,    //echo: [delay, feedback, filter]
+			undefined     //reverb: [duration, decay, reverse?]
+		);
+	}
+	//The bonus points sound
+	function confettiSound() {
+	  //D
+	  soundEffect(587.33, 0, 0.2, "square", 1, 0, 0);
+	  //A
+	  soundEffect(880, 0, 0.2, "square", 1, 0, 0.1);
+	  //High D
+	  soundEffect(1174.66, 0, 0.3, "square", 1, 0, 0.2);
 	}
 
 	moles.forEach(mole => mole.addEventListener('click', bonk));
