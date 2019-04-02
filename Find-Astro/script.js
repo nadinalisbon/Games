@@ -51,7 +51,9 @@
 		h1Text.textContent = 'Find Astro! ';
 		timeUp = false;
 		score = 0;
-		stopConfetti();
+		if(score > 10){
+		    stopConfetti();
+		}
 		h3Timer.textContent = '00:25';
 		
 		//Start Game
