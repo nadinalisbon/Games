@@ -98,9 +98,11 @@ button:hover {
 }
 @media screen and (max-width: 768px) {
   h1  h2{
+	text-align: center; 
     font-size: 5rem
   }
   h3{
+	text-align: center; 
     font-size: 5rem
   }
   .hole:after {
