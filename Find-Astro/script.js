@@ -64,12 +64,16 @@
 			// stuff here
 			timeUp = true;
 			if(score == 0){
-				sounds["sound.js-master/sounds/explosion.wav"].play();
+			    sounds["sound.js-master/sounds/explosion.wav"].play();
 			}
-				
+
+			if(score > 0 && score <= 10){
+			    sounds["sound.js-master/sounds/bounce.mp3"].play();
+			}
+
 			if(score > 10){
-				confettiSound();
-				throwConfetti();
+			    confettiSound();
+			    throwConfetti();
 			}
 		}, 25000);
 	}
