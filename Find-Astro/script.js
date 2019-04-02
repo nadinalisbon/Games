@@ -47,13 +47,13 @@
 
 	function startGame() {
 		//Reset Game variables
+		if(score > 10){
+		    stopConfetti();
+		}
 		scoreBoard.textContent = 0;
 		h1Text.textContent = 'Find Astro! ';
 		timeUp = false;
 		score = 0;
-		if(score > 10){
-		    stopConfetti();
-		}
 		h3Timer.textContent = '00:25';
 		
 		//Start Game
