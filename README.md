@@ -7,7 +7,7 @@ Astro is traveling through the clouds and it's up to you to catch them! When you
 
  🖯<a href="https://nadinalisbon.github.io/Games/Find-Astro">Let's Get Started</a>🖯
  
- ![Find Astro](https://nadinalisbon.github.io/Games/Screenshot_Find_Astro.png)
+ <img src="https://nadinalisbon.github.io/Games/Screenshot_Find_Astro.png" width="500" height="750" title="Find Astro">
 
 <br/>
 
