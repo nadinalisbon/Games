@@ -10,6 +10,7 @@ Astro is traveling through the clouds and it's up to you to catch them! When you
 <br/>
 
 <hr/>
+
 # About JavaScript30
 ![](https://javascript30.com/images/JS3-social-share.png)
 
