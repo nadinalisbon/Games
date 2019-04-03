@@ -2,7 +2,7 @@
 My Salesforce take on the classic Whack A Mole from the <a href="https://javascript30.com/">JavaScript30 course</a>
 
 ## Instructions
-Astro is traveling through the clouds and it's up to you to catch them! When you see an Astro appear click on them to score, but watch out Astro is fast and the clock is running out! How much can you score! Can you make it rain Confetti!! 
+Astro is traveling through the clouds and it's up to you to catch them! When you see an Astro appear click on them to score, but watch out Astro is fast and the clock is running out! How much can you score! Can you make it rain Confetti? 
 <br/>
 
  🖯<a href="https://nadinalisbon.github.io/Games/Find-Astro">Let's Get Started</a>🖯
